@@ -1,0 +1,6 @@
+<view>
+  <button class="open-mp-button" onTap="openGameOne">OPEN GAME ONE</button>
+  <button class="open-mp-button" onTap="openGameTwo">OPEN GAME TWO</button>
+  <button class="open-mp-button" onTap="openGameThree">OPEN GAME THREE</button>
+  <button class="open-mp-button" onTap="scanQR">SCAN QR</button>
+</view>

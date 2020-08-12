@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game-one/game-one",
+    "pages/game-two/game-two",
+    "pages/game-three/game-three"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}
