@@ -4,7 +4,7 @@
 
 project consists of one or many mini-programs
 
-to get started cd into a mini program and smash a npm install
+to get started cd into a mini program and smash an npm install
 
 eg.
 ```
