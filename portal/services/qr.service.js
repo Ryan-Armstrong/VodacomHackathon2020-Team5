@@ -58,5 +58,5 @@ class QRService {
 }
 
 const qrService = new QRService();
-// module.exports = WatsonService
+
 export default qrService;

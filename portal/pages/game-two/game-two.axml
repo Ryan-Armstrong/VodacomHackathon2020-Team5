@@ -1,3 +1,4 @@
 <view>
   <text>Game Two Page</text>
+  <text>{{state.title}}</text>
 </view>
