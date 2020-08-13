@@ -6,6 +6,7 @@
     "pages/game-three/game-three"
   ],
   "window": {
-    "defaultTitle": "My App"
+    "defaultTitle": "Vodacom Games Portal",
+    "titleBarColor": "#E60403"
   }
 }

@@ -1,0 +1,188 @@
+page {
+  background: #f4f4f4;
+  /* border-top: solid 5px #9b2114; */
+}
+
+.overlay {
+  width: 375px;
+
+  height: 80px;
+  background: #e60403;
+  position: relative;
+  overflow: hidden;
+  padding-top: 160px;
+}
+.overlay:after {
+  content: "";
+  width: 405px;
+  height: 80px;
+  background: #f4f4f4;
+  border-radius: 100% 100% 0 0;
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+}
+
+.title-box {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 20px;
+  /* padding: 20px */
+  top: 50px;
+  width: calc(100% - 80px);
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.title-first {
+  display: block;
+  color: #515151;
+  margin: 5px 10px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.title-second {
+  display: block;
+  color: #e60403;
+  font-weight: 1000;
+  font-size: 17px;
+  margin: 0 10px;
+}
+
+.title-box-content {
+  display: inline-flex;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.usr {
+  display: block;
+  position: absolute;
+  width: 100%;
+  color: white;
+
+  background-color: #bd0300;
+}
+
+.usr-content {
+  padding: 5px;
+  display: inline-flex;
+  /* vertical-align: top; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
+}
+
+.username {
+  margin: 10px;
+  font-weight: 500;
+}
+
+.qr-btn {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 20px;
+  top: 140px;
+  height: 140px;
+  width: calc(100% - 80px);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.qr-title {
+  /* text-align: center; */
+  display: block;
+  color: black;
+  font-weight: 200;
+  margin: 2px 5px;
+  font-size: 18px;
+}
+
+.qr-subtitle {
+  /* text-align: center; */
+  display: block;
+  color: #e60403;
+  font-weight: 1000;
+  margin: 0 5px;
+}
+
+.qr-logo {
+  margin: 10px;
+  margin-left: 37%;
+}
+
+.games-btn {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 20px;
+  top: 305px;
+  height: 100px;
+  width: calc(100% - 80px);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.bottom-ribbon {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  /* background-color: #e60403; */
+  /* background-color: #bd0300; */
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  padding: 20px 0px;
+  text-align: center;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.coin-title {
+  color: #777777;
+  /* display: block; */
+  font-weight: 200;
+  /* margin: 20px 0; */
+  margin: 20px 0 20px 5px;
+  font-size: 20px;
+  /* text-align: center; */
+  margin-bottom: 3px;
+}
+
+.coin-no {
+  color: #777777;
+  /* display: block; */
+  font-weight: 800;
+  margin: 20px 0;
+  font-size: 24px;
+  /* text-align: center; */
+}
+
+.bottom-ribbon-content {
+  display: inline-flex;
+  /* font-weight: bold; */
+  vertical-align: top;
+}
+
+.vodabucks-logo {
+  margin: 0 10px;
+}
+
+.open-mp-button {
+  display: inline-block;
+  width: 70px;
+}

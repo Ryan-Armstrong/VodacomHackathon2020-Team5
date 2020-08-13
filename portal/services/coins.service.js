@@ -2,18 +2,24 @@ import { Subject } from "rxjs";
 
 class CoinsService {
   app;
-  coins;
+  coins = 0;
 
   constructor() {
     this.app = getApp();
+    this.newCoinsSubject = new Subject();
   }
 
   getCoins() {
     return this.coins;
   }
 
-  setCoins(coins) {
-    this.coins = coins;
+  // setCoins(coins) {
+  //   this.coins = coins;
+  // }
+
+  addCoins(coins) {
+    this.coins = this.coins + coins;
+    this.newCoinsSubject.next(this.coins);
   }
 }
 

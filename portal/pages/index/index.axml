@@ -1,6 +1,40 @@
-<view>
-  <button class="open-mp-button" onTap="openGameOne">OPEN GAME ONE</button>
-  <button class="open-mp-button" onTap="openGameTwo">OPEN GAME TWO</button>
-  <button class="open-mp-button" onTap="openGameThree">OPEN GAME THREE</button>
-  <button class="open-mp-button" onTap="scanQR">SCAN QR</button>
+<view class="overlay"></view>
+<view class="usr">
+  <view class="usr-content">
+    <image style=" width: 30px; height:30px;" src="../../assets/images/usr-icon-gr.png" />
+    <text class="username">Lethabo</text>
+  </view>
+</view>
+<view class="qr-btn" onTap="scanQR">
+  <text class="qr-title">QR Scan</text>
+  <text class="qr-subtitle">Scan an eligable QR code and win!</text>
+  <image class="qr-logo" style=" width: 70px; height:70px;" src="../../assets/images/qr-icon.png" />
+</view>
+<view class="games-btn">
+  <text class="qr-title">My Games</text>
+  <text class="qr-subtitle">Game Portal Library</text>
+  <button class="open-mp-button" onTap="openGameOne">G1</button>
+  <button class="open-mp-button" onTap="openGameTwo">G2</button>
+  <button class="open-mp-button" onTap="openGameThree">G3</button>
+</view>
+<!--<view class="instruction-btn"><text>Step 1. Scan an Eligable QR Code</text><text>Step 2. Play a Game</text><text>Step 3. Win!</text></view> -->
+<view class="title-box">
+  <view class="title-box-content">
+    <image style="background-color: #fff; width: 50px; height:50px;" src="../../assets/images/vodacomlogo-sm.png" />
+    <view class="titles">
+      <text class="title-first">Good day, welcome to the</text>
+      <text class="title-second">My Vodacom Games Portal</text>
+    </view>
+  </view>
+</view>
+<view class="bottom-ribbon" onTap="spinCoins">
+  <view class="bottom-ribbon-content">
+    <view>
+      <image a:if="{{toggleCoinAnimation}}" class="vodabucks-logo animated flip" style="width: 28px; height:28px;" src="../../assets/images/vodabucks.png" />
+    </view>
+    <view>
+      <text class="coin-no">{{coins}}</text>
+      <text class="coin-title">VodaBucks</text>
+    </view>
+  </view>
 </view>

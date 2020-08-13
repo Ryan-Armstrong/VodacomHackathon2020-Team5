@@ -1,0 +1,110 @@
+page {
+  background: #f1f2f6;
+  /* color: #82ccdd; */
+  font-family: "pingFang SC" "pingFang";
+  font-weight: 600;
+  border-top: solid 5px #9b2114;
+}
+
+.left-btn {
+  position: fixed;
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  bottom: 0px;
+  left: 0px;
+  border: 0px;
+}
+
+.right-btn {
+  position: fixed;
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  bottom: 0px;
+  right: 0px;
+  border: 0px;
+}
+
+.score-bg {
+  position: fixed;
+  width: 100%;
+  height: 200rpx;
+  bottom: 0px;
+  display: block;
+}
+
+.score {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  font-size: 100rpx;
+  display: block;
+  font-weight: 900;
+
+  /* color: #c0392b; */
+}
+
+.title {
+  text-align: center;
+  font-size: 60rpx;
+  display: block;
+  margin: 20px;
+  color: #c0392b;
+}
+
+.outer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  background-image: url("assets/voda-light.jpeg");
+  width: 100%;
+  height: 400px;
+  position: fixed;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  /* background-color: whitesmoke; */
+}
+
+.popup {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 50px 20px;
+  top: 140px;
+  height: 140px;
+  width: calc(100% - 80px);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  text-align: center;
+}
+
+.popup-text {
+  display: block;
+  color: #515151;
+  font-weight: 200;
+  margin: 20px 0;
+}
+
+.popup-header {
+  display: block;
+  color: #e60403;
+  font-weight: 1000;
+  margin: 20px 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
