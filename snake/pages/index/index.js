@@ -1,4 +1,4 @@
-import coinService from "../../services/coins.service.js";
+// import coinService from "../../services/coins.service.js";
 
 Page({
   data: {
@@ -15,13 +15,28 @@ Page({
     // setTimeout(() => {
     //   this.init();
     // }, 2000);
-    this.navToNewMP();
   },
   onLoad() {
     console.log("start game loop");
     setTimeout(() => {
       this.init();
     }, 2000);
+
+    my.setStorage({
+      key: "currentCity",
+      data: {
+        alpha: "hello",
+        bravo: "world",
+        charlie: "aj"
+      }
+    });
+
+    my.getStorage({
+      key: "alpha",
+      success: function(res) {
+        console.log(res);
+      }
+    });
   },
   onUnload() {
     console.log("end game loop");
@@ -87,6 +102,13 @@ Page({
     ) {
       //restart game
       // this.init();
+      my.setStorage({
+        key: "currentCity",
+        data: {
+          coins: this.data.score
+        }
+      });
+
       this.setData({ end: true });
       //Lets organize the code a bit now.
 
@@ -159,6 +181,9 @@ Page({
   },
   navBack() {
     my.navigateBack();
-    coinService.addCoins(this.data.score);
+    this.setData({ end: false });
+    clearInterval(this.game_loop);
+    this.init();
+    // coinService.addCoins(this.data.score);
   }
 });

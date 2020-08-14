@@ -13,9 +13,17 @@
 <view class="games-btn">
   <text class="qr-title">My Games</text>
   <text class="qr-subtitle">Game Portal Library</text>
-  <button class="open-mp-button" onTap="openGameOne">G1</button>
-  <button class="open-mp-button" onTap="openGameTwo">G2</button>
-  <button class="open-mp-button" onTap="openGameThree">G3</button>
+  <!--<button class="open-mp-button" onTap="openGameOne">G1</button><button class="open-mp-button" onTap="openGameTwo">G2</button><button class="open-mp-button" onTap="openGameTwoSimba">G2S</button><button class="open-mp-button" onTap="openGameThree">G3</button> -->
+  <button class="open-mp-button" onTap="openGameOne">
+    <image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/coin-icon.png" />
+  </button>
+  <button class="open-mp-button" onTap="openGameTwo">
+    <image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/brick-icon.png" />
+  </button>
+  <!--<button class="open-mp-button" onTap="openGameTwoSimba">G2S</button> -->
+  <button class="open-mp-button" onTap="openGameThree">
+    <image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/labyrinth-icon.png" />
+  </button>
 </view>
 <!--<view class="instruction-btn"><text>Step 1. Scan an Eligable QR Code</text><text>Step 2. Play a Game</text><text>Step 3. Win!</text></view> -->
 <view class="title-box">

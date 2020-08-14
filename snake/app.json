@@ -1,0 +1,7 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "defaultTitle": "Vodacom Snake",
+    "titleBarColor": "#E60403"
+  }
+}

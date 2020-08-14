@@ -2,7 +2,7 @@
 <view class="overlay"></view>
 <view class="outer" style="background: {{state.colors.background}}">
   <text class="title animated bounceInDown" style="color: {{state.colors.primary}}">{{state.title}}</text>
-  <view class="inner">
+  <view class="inner" style="background-image: url({{state.bgImage}})">
     <canvas id="canvas" class="canvas" onTouchStart="touch" onTouchEnd="touch" />
   </view>
   <view class="score-bg" style="background-color:{{state.colors.primary}} ">
@@ -12,12 +12,12 @@
   <button class="right-btn" style="background-color:{{state.colors.primary}}; color:{{state.colors.background}}" onTap="right"></button>
 </view>
 <view class="popup" a:if="{{lose}}">
-  <text class="popup-header">Oh Nose! Looks like you lost</text>
+  <text class="popup-header" style="color:{{state.colors.primary}}">Oh Nose! Looks like you lost</text>
   <text class="popup-text">You have still earned {{score}} VodaBucks!</text>
   <button class="navBack" onTap="navBack">OK</button>
 </view>
 <view class="popup" a:if="{{win}}">
-  <text class="popup-header">You Won! Congratulations!</text>
+  <text class="popup-header" style="color:{{state.colors.primary}}">You Won! Congratulations!</text>
   <text class="popup-text">You have earned {{score}} VodaBucks!</text>
   <button class="navBack" onTap="navBack">OK</button>
 </view>

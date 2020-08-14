@@ -15,8 +15,21 @@ Page({
   },
   spinCoins() {
     console.log("spin coins");
-    this.setData({ toggleCoinAnimation: false });
-    this.setData({ toggleCoinAnimation: true });
+    // this.setData({ toggleCoinAnimation: false });
+    // this.setData({ toggleCoinAnimation: true });
+    this.navToNewMP();
+  },
+  navToNewMP() {
+    my.navigateToMiniProgram({
+      // appId: "3456020058086943",
+      appId: "3456020056758077",
+      success: res => {
+        console.log(JSON.stringify(res));
+      },
+      fail: res => {
+        console.log(JSON.stringify(res));
+      }
+    });
   },
   onReady() {},
   onLoad() {
@@ -33,6 +46,23 @@ Page({
     my.navigateTo({ url: "../game-one/game-one" });
   },
   openGameTwo() {
+    my.navigateTo({ url: "../game-two/game-two" });
+  },
+  openGameTwoSimba() {
+    getApp().gameState = {
+      title: "Simba Brick Smash",
+      colors: {
+        primary: "black",
+        secondary: "#f1c40f",
+        background: "white",
+        row1: "#C45B48",
+        row2: "#E5C027",
+        row3: "#458962",
+        row4: "#2A2924",
+        row5: "#135492"
+      },
+      bgImage: "assets/images/simba-bg.png"
+    };
     my.navigateTo({ url: "../game-two/game-two" });
   },
   openGameThree() {
@@ -64,7 +94,18 @@ Page({
         }
         if (res.code === this.gameQR.gameTwoSimba) {
           getApp().gameState = {
-            title: "Simba"
+            title: "Simba Brick Smash",
+            colors: {
+              primary: "black",
+              secondary: "#f1c40f",
+              background: "white",
+              row1: "#C45B48",
+              row2: "#E5C027",
+              row3: "#458962",
+              row4: "#2A2924",
+              row5: "#135492"
+            },
+            bgImage: "assets/images/simba-bg.png"
           };
           setTimeout(() => {
             my.navigateTo({ url: "../game-two/game-two" });

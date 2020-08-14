@@ -16,7 +16,8 @@ Page({
         row3: "#C0392B",
         row4: "#9B2114",
         row5: "#720B00"
-      }
+      },
+      bgImage: "assets/images/voda-light.jpeg"
     },
     score: 0,
     showScore: true
@@ -48,6 +49,19 @@ Page({
   startBall: false,
   onReady() {},
   onLoad() {
+    if (getApp().gameState.title && getApp().gameState.colors) {
+      console.log(getApp().gameState.title);
+      console.log(getApp().gameState.colors);
+      const state = {
+        title: getApp().gameState.title,
+        colors: getApp().gameState.colors,
+        bgImage: getApp().gameState.bgImage
+      };
+      this.setData({ state });
+      getApp().gameState = {};
+    }
+    console.log(getApp().gameState);
+    console.log(this.data);
     for (var c = 0; c < this.brickColumnCount; c++) {
       this.bricks[c] = [];
       for (var r = 0; r < this.brickRowCount; r++) {
@@ -55,7 +69,7 @@ Page({
       }
     }
     this.ctx = my.createCanvasContext("canvas");
-    this.interval = setInterval(() => this.draw(), 10);
+    this.interval = setInterval(() => this.draw(), 18);
     setTimeout(() => {
       this.startBall = true;
     }, 2000);
@@ -79,7 +93,7 @@ Page({
   drawBall() {
     this.ctx.beginPath();
     this.ctx.arc(this.x, this.y, 10, 0, Math.PI * 2);
-    this.ctx.fillStyle = this.data.state.colors.primary;
+    this.ctx.fillStyle = this.data.state.colors.secondary;
     this.ctx.fill();
     this.ctx.closePath();
   },
@@ -183,15 +197,10 @@ Page({
         if (this.x > this.paddleX && this.x < this.paddleX + this.paddleWidth) {
           this.dy = -this.dy;
         } else {
+          // this.dy = -this.dy;
           console.error("GAME OVER");
           clearInterval(this.interval);
-          // coinService.addCoins(this.data.score);
           this.setData({ lose: true });
-          // setTimeout(() => {
-          //   my.navigateBack();
-          //   console.log("adding coins");
-          //   coinService.addCoins(this.data.score);
-          // }, 3000);
         }
       }
 
@@ -229,7 +238,6 @@ Page({
   touch(e) {
     console.log(e);
     if (e.touches && e.touches[0]) {
-      // console.log(e.touches[0].x, e.touches[0].y);
       this.touchX = e.touches[0].x;
       this.touchY = e.touches[0].y;
       this.touching = true;
@@ -244,7 +252,6 @@ Page({
   },
   navBack() {
     my.navigateBack();
-    console.log("adding coins");
     coinService.addCoins(this.data.score);
   }
 });
