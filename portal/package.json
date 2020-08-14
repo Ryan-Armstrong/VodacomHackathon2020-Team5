@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mini-antui": "^0.4.35",
     "rxjs": "^6.6.2"
   }
 }

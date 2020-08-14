@@ -1,3 +1,60 @@
-<view>
-  <text>Game One Page</text>
+<view class="container">
+    <!-- Arrow Image -->
+    <view class="img-container">
+        <view animation="{{animation}}">
+                  <image animation="{{animation}}" src="../../assets/images/spin-arrow.png" id="arrow"></image>
+        </view>
+
+    </view>
+    <view class="legend-container">
+          <flex justify="around">
+        <label>
+            <view class="legend-element red"></view>
+            <text>Prize!</text>
+        </label>
+        <label>
+            <view class="legend-element orange"></view>
+            <text>300</text>
+        </label>
+        <label>
+            <view class="legend-element yellow"></view>
+            <text>250</text>
+        </label>
+        <label>
+            <view class="legend-element green"></view>
+            <text>200</text>
+        </label>
+        <label>
+            <view class="legend-element blue"></view>
+            <text>150</text>
+        </label>
+        <label>
+            <view class="legend-element purple"></view>
+            <text>100</text>
+        </label>
+        <label>
+            <view class="legend-element lilac"></view>
+            <text>50</text>
+        </label>
+
+    </flex>
+    </view>
+
+    <!-- Spin Button -->
+    <view class="btn-container" >
+        <button class="btn neon" id="btn" onTap="rotate">Spin</button>
+    </view>
+    
+  <modal-view
+    show="{{modalOpened}}"
+    showClose="{{showClose}}"
+    onModalClick="onModalClick"
+    onModalClose="onModalClose"
+    topImage="{{gameProviderLogo}}"
+    className= "{{landedColour}}"
+  >
+    <view slot="header">Congratulations You have won {{ winningsDescription }}!</view>
+    <view slot="footer" onTap="closeGame">Accept</view>
+  </modal-view>
+
 </view>

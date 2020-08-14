@@ -1,1 +1,9 @@
-{}
+{
+  "defaultTitle": "Spin to Win!",
+  "titleBarColor": "#000",
+  "usingComponents": {
+    "flex": "../../node_modules/mini-antui/es/flex/index",
+    "flex-item": "../../node_modules/mini-antui/es/flex/flex-item/index",
+    "modal-view": "../../node_modules/mini-antui/es/modal/index"
+  }
+}
