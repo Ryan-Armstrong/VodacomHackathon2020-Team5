@@ -1,60 +1,46 @@
 <view class="container">
+    <image a:if="{{wheelanim}}" class="wheel animated flipInY" src="../../assets/images/wheel.png" id="wheel"></image>
     <!-- Arrow Image -->
-    <view class="img-container">
+    <view a:if="{{wheelanim}}" class="img-container">
         <view animation="{{animation}}">
-                  <image animation="{{animation}}" src="../../assets/images/spin-arrow.png" id="arrow"></image>
+            <image animation="{{animation}}" src="../../assets/images/arrow.png" id="arrow"></image>
         </view>
-
     </view>
-    <view class="legend-container">
-          <flex justify="around">
-        <label>
-            <view class="legend-element red"></view>
-            <text>Prize!</text>
-        </label>
-        <label>
-            <view class="legend-element orange"></view>
-            <text>300</text>
-        </label>
-        <label>
-            <view class="legend-element yellow"></view>
-            <text>250</text>
-        </label>
-        <label>
-            <view class="legend-element green"></view>
-            <text>200</text>
-        </label>
-        <label>
-            <view class="legend-element blue"></view>
-            <text>150</text>
-        </label>
-        <label>
-            <view class="legend-element purple"></view>
-            <text>100</text>
-        </label>
-        <label>
-            <view class="legend-element lilac"></view>
-            <text>50</text>
-        </label>
-
-    </flex>
+    <!--<view class="legend-container"><flex justify="around"><label><view class="legend-element red"></view><text>Prize!</text></label><label><view class="legend-element orange"></view><text>300</text></label><label><view class="legend-element yellow"></view><text>250</text></label><label><view class="legend-element green"></view><text>200</text></label><label><view class="legend-element blue"></view><text>150</text></label><label><view class="legend-element purple"></view><text>100</text></label><label><view class="legend-element lilac"></view><text>50</text></label></flex></view> -->
+    <view class="spin-btn-container" onTap="rotate">
+        <image a:if="{{btnanim}}" src="../../assets/images/spin-btn-2.png" class="spin-btn animated fadeInUp"></image>
     </view>
-
+    <!--<image class="bucks animated rotateIn" src="../../assets/images/vodabucks.png"></image> -->
+    <image a:if="{{bucksanim}}" class="bucks animated bounceIn" src="../../assets/images/vodabucks.png">
+    </image>
     <!-- Spin Button -->
-    <view class="btn-container" >
-        <button class="btn neon" id="btn" onTap="rotate">Spin</button>
-    </view>
-    
-  <modal-view
-    show="{{modalOpened}}"
-    showClose="{{showClose}}"
-    onModalClick="onModalClick"
-    onModalClose="onModalClose"
-    topImage="{{gameProviderLogo}}"
-    className= "{{landedColour}}"
-  >
-    <view slot="header">Congratulations You have won {{ winningsDescription }}!</view>
-    <view slot="footer" onTap="closeGame">Accept</view>
-  </modal-view>
-
+    <view class="neon flasher a animated bounceIn infinite"></view>
+    <view a:if="{{flash2}}" class="neon flasher b animated bounceIn infinite"></view>
+    <view a:if="{{flash3}}" class="neon flasher c animated bounceIn infinite"></view>
+    <view a:if="{{flash2}}" class="neon flasher d animated bounceIn infinite"></view>
+    <view class="neon flasher e animated bounceIn infinite"></view>
+    <view class="neon flasher f animated bounceIn infinite"></view>
+    <view a:if="{{flash2}}" class="neon flasher g animated bounceIn infinite"></view>
+    <view a:if="{{flash3}}" class="neon flasher h animated bounceIn infinite"></view>
+    <view a:if="{{flash2}}" class="neon flasher i animated bounceIn infinite"></view>
+    <view class="neon flasher j animated bounceIn infinite"></view>
+    <!--<modal-view show="{{modalOpened}}" showClose="{{showClose}}" onModalClick="onModalClick" onModalClose="onModalClose" topImage="{{gameProviderLogo}}" className= "{{landedColour}} animated tada"> -->
+    <modal-view show="{{modalOpened}}" showClose="{{showClose}}" onModalClick="onModalClick" onModalClose="onModalClose" className= "{{landedColour}} animated tada three">
+        <view slot="header">
+            <text style="display: block; margin: 5px;">CONGRATULATIONS!</text>
+            <image style="display: block; width: 100px; height: 100px; margin: 5px; margin-left: 80px;" class="animated fadeInDown" src="{{gameProviderLogo}}"></image>
+            <!--<image style="" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> -->
+            <text style="display: block;">You have WON
+                <!--<image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> {{ winningsDescription }}! -->
+            </text>
+            <text style="display: block;">
+                <image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> {{ winningsDescription }}!
+            </text>
+        </view>
+        <!--<view slot="footer" onTap="closeGame">CLAIM</view> -->
+        <view slot="footer" onTap="closeGame">
+            <image style="width: 165px; height: 60px; margin: 20px 10px;" class="animated fadeInUp" src="../../assets/images/claim-btn.png"></image>
+        </view>
+    </modal-view>
+    <!--<view></view> -->
 </view>

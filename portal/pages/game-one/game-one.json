@@ -1,6 +1,6 @@
 {
   "defaultTitle": "Spin to Win!",
-  "titleBarColor": "#000",
+  "titleBarColor": "#b00017",
   "usingComponents": {
     "flex": "../../node_modules/mini-antui/es/flex/index",
     "flex-item": "../../node_modules/mini-antui/es/flex/flex-item/index",

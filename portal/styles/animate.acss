@@ -23,6 +23,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-iteration-count: infinite;
 }
 
+.animated.three {
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
+}
+
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
