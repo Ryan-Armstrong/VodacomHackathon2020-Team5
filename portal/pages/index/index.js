@@ -15,14 +15,14 @@ Page({
   },
   spinCoins() {
     console.log("spin coins");
-    // this.setData({ toggleCoinAnimation: false });
-    // this.setData({ toggleCoinAnimation: true });
-    this.navToNewMP();
+    this.setData({ toggleCoinAnimation: false });
+    this.setData({ toggleCoinAnimation: true });
+    // this.navToNewMP();
   },
   navToNewMP() {
     my.navigateToMiniProgram({
-      // appId: "3456020058086943",
-      appId: "3456020056758077",
+      appId: "3456020058086943",
+      // appId: "3456020056758077",
       success: res => {
         console.log(JSON.stringify(res));
       },
@@ -32,6 +32,15 @@ Page({
     });
   },
   onReady() {},
+  storage() {
+    my.getStorage({
+      key: "coins",
+      success: function(res) {
+        console.log(res);
+        my.alert({ content: res.data });
+      }
+    });
+  },
   onLoad() {
     coinService.newCoinsSubject.subscribe(coins => {
       this.setData({ coins: coins });
@@ -41,6 +50,21 @@ Page({
         this.spinCoins();
       }, 1500);
     });
+
+    coinService.newGameSubject.subscribe(game => {
+      // console.log(unlocked);
+      this.setData({
+        gameId: game.id,
+        gameName: game.name,
+        gameImage: game.image,
+        gameUnlocked: true
+      });
+    });
+
+    coinService.noGameSubject.subscribe(game => {
+      this.setGames();
+    });
+    // this.setData({ gameUnlocked: true });
   },
   openGameOne() {
     my.navigateTo({ url: "../game-one/game-one" });
@@ -61,7 +85,8 @@ Page({
         row4: "#2A2924",
         row5: "#135492"
       },
-      bgImage: "assets/images/simba-bg.png"
+      // bgImage: "assets/images/simba-bg.png"
+      bgImage: "assets/images/simba-brick-bg.png"
     };
     my.navigateTo({ url: "../game-two/game-two" });
   },
@@ -126,5 +151,26 @@ Page({
         }
       }
     });
+  },
+  closePopup() {
+    this.setData({ gameUnlocked: false });
+    this.setGames();
+  },
+  setGames() {
+    if (coinService.games[0].unlocked) {
+      setTimeout(() => {
+        this.setData({ gameOne: true });
+      }, 500);
+    }
+    if (coinService.games[1].unlocked) {
+      setTimeout(() => {
+        this.setData({ gameTwo: true });
+      }, 1000);
+    }
+    if (coinService.games[2].unlocked) {
+      setTimeout(() => {
+        this.setData({ gameThree: true });
+      }, 1500);
+    }
   }
 });

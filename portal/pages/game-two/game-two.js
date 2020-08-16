@@ -5,6 +5,7 @@ import coinService from "../../services/coins.service.js";
 
 Page({
   data: {
+    gameProviderLogo: "../../assets/images/vodacomlogo.png",
     state: {
       title: "Voda Bricks",
       colors: {
@@ -59,6 +60,7 @@ Page({
       };
       this.setData({ state });
       getApp().gameState = {};
+      this.setData({ gameProviderLogo: "../../assets/images/simba-logo.png" });
     }
     console.log(getApp().gameState);
     console.log(this.data);
@@ -253,5 +255,6 @@ Page({
   navBack() {
     my.navigateBack();
     coinService.addCoins(this.data.score);
+    coinService.newGameUnlocked(1);
   }
 });

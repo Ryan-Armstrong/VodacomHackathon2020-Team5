@@ -1,11 +1,15 @@
 page {
-  /* background: #f1f2f6; */
-  /* background: #e60403; */
-  /* background: #d92325; */
-  background: rgb(215, 41, 28);
+  background: linear-gradient(182deg, #dd2437, #b00017, #850011);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+
   font-family: "pingFang SC" "pingFang";
   font-weight: 600;
-  border-top: solid 5px #9b2114;
+  /* border-top: solid 5px #e2c9c7; */
+  border-top: solid 5px #fff;
 }
 
 .outer {
@@ -19,7 +23,7 @@ page {
   width: 100%;
   height: 400px;
   position: fixed;
-  background-image: url("assets/images/voda-red.png");
+  /* background-image: url("assets/images/voda-red.png"); */
 }
 
 .canvas {
@@ -146,4 +150,55 @@ page {
   font-weight: 1000;
   margin: 20px 0;
   font-size: 18px;
+}
+
+.am-modal {
+  border-radius: 10px;
+  border: 5px solid #3d3d3d;
+}
+
+.am-modal-footer::before {
+  background-color: #3d3d3d;
+  height: 10px;
+}
+
+.am-modal-footer {
+  color: #3d3d3d;
+  font-size: 20px;
+  background-color: #b00017;
+  height: 100px;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }

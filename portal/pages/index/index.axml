@@ -1,48 +1,64 @@
 <view class="overlay"></view>
 <view class="usr">
   <view class="usr-content">
-    <image style=" width: 30px; height:30px;" src="../../assets/images/usr-icon-gr.png" />
-    <text class="username">Lethabo</text>
+    <image onTap="openGameOne" style=" width: 30px; height:30px;" src="../../assets/images/usr-icon-gr.png" />
+    <!--<text onTap="openGameTwo" class="username">Lethabo</text> -->
+    <text onTap="openGameTwoSimba" class="username">Lethabo</text>
   </view>
 </view>
 <view class="qr-btn" onTap="scanQR">
   <text class="qr-title">QR Scan</text>
   <text class="qr-subtitle">Scan an eligable QR code and win!</text>
-  <image class="qr-logo" style=" width: 70px; height:70px;" src="../../assets/images/qr-icon.png" />
+  <image class="qr-logo" style="width: 50px; height:50px;" src="../../assets/images/qr-icon.png" />
 </view>
-<view class="games-btn">
-  <text class="qr-title">My Games</text>
-  <text class="qr-subtitle">Game Portal Library</text>
-  <!--<button class="open-mp-button" onTap="openGameOne">G1</button><button class="open-mp-button" onTap="openGameTwo">G2</button><button class="open-mp-button" onTap="openGameTwoSimba">G2S</button><button class="open-mp-button" onTap="openGameThree">G3</button> -->
-  <button class="open-mp-button" onTap="openGameOne">
-    <image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/coin-icon.png" />
-  </button>
-  <button class="open-mp-button" onTap="openGameTwo">
-    <image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/brick-icon.png" />
-  </button>
-  <!--<button class="open-mp-button" onTap="openGameTwoSimba">G2S</button> -->
-  <button class="open-mp-button" onTap="openGameThree">
-    <image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/labyrinth-icon.png" />
-  </button>
+<!--<view class="games-btn"><text class="qr-title">My Games</text><text class="qr-subtitle">Game Portal Library</text><button class="open-mp-button" onTap="openGameOne"><image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/coin-icon.png" /></button><button class="open-mp-button" onTap="openGameTwo"><image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/brick-icon.png" /></button><button class="open-mp-button" onTap="openGameThree"><image style="background-color: #fff; width: 40px; height:40px;" src="../../assets/images/labyrinth-icon.png" /></button></view> -->
+<view a:if="{{gameOne}}" class="spin-btn animated slideInRight" onTap="openGameOne">
+  <image class="qrx-logo" style="width: 30px; height:30px;" src="../../assets/images/coin-icon.png" />
+  <text class="qrx-title">Voda Spin-to-Win!</text>
+  <text class="qrx-subtitle">Spin and Win Rewards!</text>
 </view>
-<!--<view class="instruction-btn"><text>Step 1. Scan an Eligable QR Code</text><text>Step 2. Play a Game</text><text>Step 3. Win!</text></view> -->
+<view a:if="{{gameTwo}}" class="brick-btn animated slideInRight" onTap="openGameTwo">
+  <image class="qrx-logo" style="width: 30px; height:30px;" src="../../assets/images/brick-icon.png" />
+  <text class="qrx-title">Voda Bricks</text>
+  <text class="qrx-subtitle">Play the Voda Brick Game</text></view>
+<!--<view a:if="{{gameThree}}" class="snake-btn animated slideInRight" onTap="navToNewMP"> -->
+<view a:if="{{gameThree}}" class="snake-btn animated slideInRight" onTap="openGameThree">
+  <image class="qrx-logo" style="width: 30px; height:30px;" src="../../assets/images/labyrinth-icon.png" />
+  <text class="qrx-title">Voda Snake</text>
+  <text class="qrx-subtitle">Play the Vodacom Snake Game</text>
+</view>
 <view class="title-box">
   <view class="title-box-content">
-    <image style="background-color: #fff; width: 50px; height:50px;" src="../../assets/images/vodacomlogo-sm.png" />
+    <image onTap="openGameThree" style="background-color: #fff; width: 50px; height:50px;" src="../../assets/images/vodacomlogo-sm.png" />
     <view class="titles">
       <text class="title-first">Good day, welcome to the</text>
-      <text class="title-second">My Vodacom Games Portal</text>
+      <text onTap="navToNewMP"class="title-second">My Vodacom Games Portal</text>
     </view>
   </view>
 </view>
 <view class="bottom-ribbon" onTap="spinCoins">
   <view class="bottom-ribbon-content">
-    <view>
+    <view onTap="openGameTwo">
       <image a:if="{{toggleCoinAnimation}}" class="vodabucks-logo animated flip" style="width: 28px; height:28px;" src="../../assets/images/vodabucks.png" />
     </view>
     <view>
       <text class="coin-no">{{coins}}</text>
-      <text class="coin-title">VodaBucks</text>
+      <text onTap="storage" class="coin-title">VodaBucks</text>
     </view>
   </view>
 </view>
+<modal-view show="{{gameUnlocked}}" showClose="{{false}}" onModalClick="onModalClick" onModalClose="onModalClose" className= "animated tada">
+  <view slot="header">
+    <text style="display: block; margin: 5px;">NEW GAME!</text>
+    <image style="display: block; width: 100px; height: 100px; margin: 5px; margin-left: 80px;" class="animated fadeInDown" src="{{gameImage}}"></image>
+    <text style="display: block;">You have unlocked
+    </text>
+    <text style="display: block;">
+      <!--<image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image>  -->
+      {{gameName}}
+    </text>
+  </view>
+  <view slot="footer" onTap="closePopup">
+    <image style="width: 165px; height: 60px; margin: 20px 10px;" class="animated fadeInUp" src="../../assets/images/unlock-btn.png"></image>
+  </view>
+</modal-view>

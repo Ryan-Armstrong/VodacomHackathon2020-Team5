@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Spin to Win!",
+  "defaultTitle": "Voda Spin-to-Win!",
   "titleBarColor": "#b00017",
   "usingComponents": {
     "flex": "../../node_modules/mini-antui/es/flex/index",

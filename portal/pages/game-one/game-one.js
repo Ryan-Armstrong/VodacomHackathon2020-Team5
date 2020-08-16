@@ -84,9 +84,10 @@ Page({
   },
   closeGame() {
     my.navigateBack();
-    setTimeout(() => {
-      coinService.addCoins(this.data.bucks);
-    }, 500);
+    // setTimeout(() => {
+    coinService.addCoins(this.data.bucks);
+    coinService.newGameUnlocked(0);
+    // }, 500);
   },
   displayResults() {
     setTimeout(() => {

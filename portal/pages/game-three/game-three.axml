@@ -1,4 +1,4 @@
-<text class="title">Voda Snake Mania</text>
+<text class="title">Voda Snake-Mania</text>
 <text class="score">VodaBucks: {{score}}</text>
 <view class="outer" style="background: {{state.colors.background}}">
   <!--<view class="inner" style="background-image: url({{state.bgImage}})"> -->
@@ -18,8 +18,18 @@
 <button class="ctrl right" onTap="right">
   <image class="ctrl-icon-right" src="../../assets/images/chevron-right.png" />
 </button>
-<view class="popup" a:if="{{end}}">
-  <text class="popup-header" style="color:{{state.colors.primary}}">Congratulations!</text>
-  <text class="popup-text">You have earned {{score}} VodaBucks!</text>
-  <button class="navBack" onTap="navBack">OK</button>
-</view>
+<!--<view class="popup" a:if="{{end}}"><text class="popup-header" style="color:{{state.colors.primary}}">Congratulations!</text><text class="popup-text">You have earned {{score}} VodaBucks!</text><button class="navBack" onTap="navBack">OK</button></view> -->
+<modal-view show="{{end}}" showClose="{{false}}" onModalClick="onModalClick" onModalClose="onModalClose" className= "{{landedColour}} animated fadeInDown">
+  <view slot="header">
+    <text style="display: block; margin: 5px;">CONGRATULATIONS!</text>
+    <image style="display: block; width: 100px; height: 100px; margin: 5px; margin-left: 80px;" class="animated fadeInDown" src="../../assets/images/vodacomlogo.png"></image>
+    <text style="display: block;">You have WON
+    </text>
+    <text style="display: block;">
+      <image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> {{score}} VodaBucks!
+    </text>
+  </view>
+  <view slot="footer" onTap="navBack">
+    <image style="width: 165px; height: 60px; margin: 20px 10px;" class="animated fadeInUp" src="../../assets/images/claim-btn.png"></image>
+  </view>
+</modal-view>

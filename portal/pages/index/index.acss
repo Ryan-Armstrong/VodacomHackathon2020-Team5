@@ -90,13 +90,82 @@ page {
   background-color: #fff;
   margin: 20px;
   top: 140px;
-  height: 140px;
+  height: 100px;
   width: calc(100% - 80px);
   padding: 5px 20px;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
   -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
   box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.spin-btn {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 20px;
+  top: 270px;
+  height: 50px;
+  width: calc(100% - 80px);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.brick-btn {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 20px;
+  top: 345px;
+  height: 50px;
+  width: calc(100% - 80px);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.snake-btn {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin: 20px;
+  top: 420px;
+  height: 50px;
+  width: calc(100% - 80px);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  -moz-box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+  box-shadow: 0px 5px 32px -2px rgba(115, 115, 115, 0.72);
+}
+
+.qrx-title {
+  /* text-align: center; */
+  display: block;
+  color: black;
+  font-weight: 200;
+  margin: 2px 5px;
+  font-size: 18px;
+  float: left;
+}
+
+.qrx-subtitle {
+  /* text-align: center; */
+  display: block;
+  color: #e60403;
+  font-weight: 1000;
+  margin: 0 5px;
+  float: left;
+}
+
+.qrx-logo {
+  float: left;
+  margin: 7px 2px;
 }
 
 .qr-title {
@@ -117,8 +186,8 @@ page {
 }
 
 .qr-logo {
-  margin: 20px 10px;
-  margin-left: 37%;
+  margin: 7px 10px;
+  margin-left: 43%;
 }
 
 .games-btn {
@@ -126,7 +195,7 @@ page {
   position: absolute;
   background-color: #fff;
   margin: 20px;
-  top: 305px;
+  bottom: 25px;
   height: 110px;
   width: calc(100% - 80px);
   padding: 5px 20px;
@@ -188,4 +257,21 @@ page {
   width: 96px;
   height: 40px;
   border: none;
+}
+
+.am-modal {
+  border-radius: 10px;
+  border: 5px solid #3d3d3d;
+}
+
+.am-modal-footer::before {
+  background-color: #3d3d3d;
+  height: 10px;
+}
+
+.am-modal-footer {
+  color: #3d3d3d;
+  font-size: 20px;
+  background-color: #b00017;
+  height: 100px;
 }

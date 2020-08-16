@@ -101,6 +101,11 @@ Page({
       // this.score++;
       const score = this.data.score + 10;
       this.setData({ score });
+      my.vibrate({
+        success: () => {
+          // my.alert({ title: "Vibration on" });
+        }
+      });
       //Create new food
       this.create_food();
     } else {
@@ -160,5 +165,6 @@ Page({
   navBack() {
     my.navigateBack();
     coinService.addCoins(this.data.score);
+    coinService.newGameUnlocked(2);
   }
 });
