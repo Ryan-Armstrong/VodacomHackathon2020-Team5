@@ -1,0 +1,8 @@
+<view class="container">
+  <!-- buttongroup -->
+  <view class="button-group"  style ="{{cssProps}}">
+    <generic-button className= "{{currentButtonIndex==0 ? selectedClass : notSelectedClass}}" size="mini" onSubmit="onSubmit" hoverClass="{{activeClasses.button_class_left}}-hover " id=1>{{button_text_left}}</generic-button>
+    <generic-button className= "{{currentButtonIndex==1 ? selectedClass : notSelectedClass}}" size="mini" onSubmit="onSubmit" hoverClass="{{activeClasses.button_class_middle}}-hover " id=2>{{button_text_middle}}</generic-button>
+    <generic-button className= "{{currentButtonIndex==2 ? selectedClass : notSelectedClass}}" size="mini" onSubmit="onSubmit" hoverClass="{{activeClasses.button_class_right}}-hover " id=3>{{button_text_right}}</generic-button>
+  </view>
+</view>

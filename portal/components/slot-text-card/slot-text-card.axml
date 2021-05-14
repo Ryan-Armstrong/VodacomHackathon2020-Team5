@@ -1,0 +1,10 @@
+<view class="icon-card {{(notification ? 'notification' : '')}} {{(selected ? 'selected' : '')}}" onTap="onTap"> 
+  <view class="icon-slot">
+    <slot name="icon-slot"/>
+  </view>
+  <text class="card-title">{{title}}</text>
+  <text class="card-text">{{text}}</text>
+  <view a:if="{{notification}}" class="notification-text">
+    <text >{{notificationText}}</text>
+  </view>
+</view>

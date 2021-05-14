@@ -40,6 +40,7 @@ Page({
     } else {
       this.setData({ gameProviderLogo: "../../assets/images/simba-logo.png" });
     }
+    // this.rotate();
   },
   rotate() {
     const degrees = 2160 * 3 + Math.floor(Math.random() * 360) + 1;

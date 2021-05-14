@@ -1,5 +1,6 @@
 page {
-  background: linear-gradient(182deg, #dd2437, #b00017, #850011);
+  /* background: linear-gradient(182deg, #dd2437, #b00017, #850011); */
+  background-color:  #222739;
   background-size: 600% 600%;
 
   -webkit-animation: AnimationName 5s ease infinite;
@@ -165,7 +166,7 @@ page {
 .am-modal-footer {
   color: #3d3d3d;
   font-size: 20px;
-  background-color: #b00017;
+  background-color: #08081B;
   height: 100px;
 }
 

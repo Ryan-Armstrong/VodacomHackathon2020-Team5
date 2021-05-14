@@ -1,0 +1,28 @@
+<view>
+  <!-- container -->
+  <view class="card-container">
+    <!-- card component -->
+    <view class="card" style="background-color:{{CardBackgroundColor}} ">
+      <block a:for="{{optionsList}}" a:for-index="idx" a:for-item="item">
+        <!-- content inside card -->
+        <view class="content" onTap="onTap" id="{{idx}}">
+          <!-- icon -->
+          <view a:if={{showIcons}} class="icon">
+            <v-icon type="{{item.icon_type}}" width="{{55}}" height="{{55}}" color={{iconColor}}></v-icon>
+          </view>
+          <!-- text -->
+          <view class="text" style="color:{{textColor}}">
+            <text>{{item.card_text}}</text>
+          </view>
+          <!-- radioButton -->
+          <view a:if={{showRadioButtons}} class="radio-outer" style=" border-color:{{radioButtonColor}} ">
+            <view hidden="{{chosenCardId!=idx}}" class="radio-inner" style="{{cssProps}} ">
+            </view>
+          </view>
+        </view>
+        <view class="underline" style="border-color:{{lineSeperatorColor}}">
+        </view>
+        <block/>
+        </view>
+        </view>
+        </view>

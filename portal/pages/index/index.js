@@ -31,7 +31,9 @@ Page({
       }
     });
   },
-  onReady() {},
+  onReady() {
+       coinService.newGameUnlocked(0);
+  },
   storage() {
     my.getStorage({
       key: "coins",

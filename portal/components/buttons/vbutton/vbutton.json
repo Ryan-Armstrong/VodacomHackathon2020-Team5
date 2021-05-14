@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents":{
+    "generic-button": "../generic-button/generic-button"
+  }
+}

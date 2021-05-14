@@ -7,7 +7,7 @@ page {
   width: 375px;
 
   height: 80px;
-  background: #e60403;
+  background: #222739;
   position: relative;
   overflow: hidden;
   padding-top: 160px;
@@ -66,7 +66,7 @@ page {
   width: 100%;
   color: white;
 
-  background-color: #bd0300;
+  background-color: #222739;
 }
 
 .usr-content {

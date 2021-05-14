@@ -1,0 +1,21 @@
+@import './Roboto/stylesheet.acss';
+
+:root {
+  --primary-red: #E60000;
+  --primary-grey: #4A4D4E;
+  --primary-black: #08081B;
+  --primary-white: #FFFFFF;
+  --additional-red: #C50011;
+  --secondary-aubergine: #5E2750;
+  --base1: #D8DBE0;
+  --base2: #C9CCD4;
+  --base3: #A8ACB8;
+  --base4: #8A8D9C;
+  --base5: #6D6F81;
+  --base6: #525365;
+  --base7: #393949;
+  --base8: #222739;
+  --base9: #141827;
+  --info: #00B0CA;
+  --black10: #F2F4F7;
+}

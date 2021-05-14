@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "slot-text-card": "../slot-text-card/slot-text-card"
+  }
+}

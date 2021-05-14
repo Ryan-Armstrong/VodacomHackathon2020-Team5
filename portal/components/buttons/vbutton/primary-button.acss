@@ -1,0 +1,19 @@
+.primary {
+  background: var(--primary-red);
+  box-shadow: 0rpx 8rpx 30rpx rgba(230, 0, 0, 0.2);
+  border: none;
+}
+
+.primary-hover{
+  background: var(--additional-red);
+  box-shadow: none;
+}
+
+.primary-disabled
+{
+  background: var(--base7);
+}
+
+.primary-disabled-text{
+  color: var(--base3);
+}

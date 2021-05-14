@@ -1,0 +1,4 @@
+
+<view a:if="{{currentUrl === url}}">
+  <slot/>
+</view>

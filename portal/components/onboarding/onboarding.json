@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "block-image": "../block-image/block-image",
+    "vbutton":"../buttons/vbutton/vbutton",
+    "swipe-action": "../swipe-action/swipe-action"
+  }
+}

@@ -1,0 +1,40 @@
+.banner {
+  width: 696rpx;
+  position: relative;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.banner > image{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.image-view{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: var(--primary-white);
+  position: absolute;
+  bottom: 32rpx;
+  left: 32rpx;
+  z-index: 5;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-view image{
+  width: 80%;
+  height: 80%;
+}
+
+.dark{
+  background-color: var(--base8); 
+}
+
+.light{
+  background-color: var(--primary-white);
+}

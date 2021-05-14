@@ -1,0 +1,6 @@
+<view hover-class="{{hoverClass}}" class= '{{disabled ? "button-generic " + disabledClass + " " + 
+        size: "button-generic" + " " + size + " " + className }}' onTap="onSubmit" hover-stay-time="{{hover_stay}}" hover-start-time="{{hover_start}}">
+  <text class = "button-text  {{size +  '-text'}}  {{disabled? disabledTextClass:''}}">
+    <slot/>
+  </text>
+</view>

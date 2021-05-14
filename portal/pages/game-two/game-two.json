@@ -1,6 +1,6 @@
 {
   "defaultTitle": "Voda Bricks",
-  "titleBarColor": "#cb1719",
+  "titleBarColor": "#08081B",
   "usingComponents": {
     "flex": "../../node_modules/mini-antui/es/flex/index",
     "flex-item": "../../node_modules/mini-antui/es/flex/flex-item/index",

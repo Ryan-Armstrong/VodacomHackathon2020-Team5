@@ -1,0 +1,3 @@
+<view class="icon-parent">
+  <image onTap="onTap" class="icon {{colour? colour: ''}}" mode="scaleToFill" src="{{src}}" style ="{{cssProps}}"/>
+</view>

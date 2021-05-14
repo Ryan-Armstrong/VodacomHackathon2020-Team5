@@ -1,0 +1,3 @@
+<view class="block {{style}}" onTap="onTap">
+  <image mode="aspectFit" src="{{imageURL}}"/>
+</view>

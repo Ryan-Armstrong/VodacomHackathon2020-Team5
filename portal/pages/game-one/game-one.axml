@@ -27,15 +27,23 @@
     <!--<modal-view show="{{modalOpened}}" showClose="{{showClose}}" onModalClick="onModalClick" onModalClose="onModalClose" topImage="{{gameProviderLogo}}" className= "{{landedColour}} animated tada"> -->
     <modal-view show="{{modalOpened}}" showClose="{{showClose}}" onModalClick="onModalClick" onModalClose="onModalClose" className= "{{landedColour}} animated tada three">
         <view slot="header">
-            <text style="display: block; margin: 5px;">CONGRATULATIONS!</text>
-            <image style="display: block; width: 100px; height: 100px; margin: 5px; margin-left: 80px;" class="animated fadeInDown" src="{{gameProviderLogo}}"></image>
+            <text style="display: block; margin: 5px;">YOU HAVE WON A: </text>
+
             <!--<image style="" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> -->
-            <text style="display: block;">You have WON
+             <!-- <banner-card  imageURL="../../images/logo_small.png" backroundURL="../../images/banner.png"> -->
+
+            <view class="card-container">
+              <view class="voucher-amount-view-x">
+                    <text>R {{ bucks }}</text>
+            </view> </view>    
+
+            <text style="display: block; margin: 10rpx;">VOUCHER FROM
                 <!--<image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> {{ winningsDescription }}! -->
             </text>
-            <text style="display: block;">
-                <image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> {{ winningsDescription }}!
-            </text>
+            <view class="card-container">
+                <image class="animated fadeInDown brand-logo" src="../../images/logo_small.png"></image>
+            </view>
+
         </view>
         <!--<view slot="footer" onTap="closeGame">CLAIM</view> -->
         <view slot="footer" onTap="closeGame">

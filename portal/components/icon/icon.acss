@@ -1,0 +1,7 @@
+.icon{
+  width:var(--width);
+  height:var(--height);
+  background-color: var(--color);
+  background-blend-mode: overlay;
+  mask: var(--mask );
+}

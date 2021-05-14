@@ -1,0 +1,17 @@
+.secondary {
+background: var(--primary-black);
+border: 2rpx solid var(--primary-white);
+}
+
+.secondary-hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.secondary-disabled{
+  border: 2rpx solid var(--base3);
+  background: var(--primary-black);
+
+}
+.secondary-disabled-text{
+  color: var(--base3);
+}

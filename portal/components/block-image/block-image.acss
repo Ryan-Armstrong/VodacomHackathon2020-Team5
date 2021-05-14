@@ -1,0 +1,21 @@
+.block{
+  width: 335rpx;
+  height:280rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+
+.dark{
+  background-color: var(--base8)
+}
+
+.light{
+  background-color: var(--primary-white)
+}
+
+.block image {
+  height: 135rpx;
+  margin: auto;
+}

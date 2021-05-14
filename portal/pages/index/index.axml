@@ -3,7 +3,7 @@
   <view class="usr-content">
     <image onTap="openGameOne" style=" width: 30px; height:30px;" src="../../assets/images/usr-icon-gr.png" />
     <!--<text onTap="openGameTwo" class="username">Lethabo</text> -->
-    <text onTap="openGameTwoSimba" class="username">Lethabo</text>
+    <text onTap="openGameTwoSimba" class="username">Ngoni</text>
   </view>
 </view>
 <view class="qr-btn" onTap="scanQR">
@@ -42,8 +42,8 @@
       <image a:if="{{toggleCoinAnimation}}" class="vodabucks-logo animated flip" style="width: 28px; height:28px;" src="../../assets/images/vodabucks.png" />
     </view>
     <view>
-      <text class="coin-no">{{coins}}</text>
-      <text onTap="storage" class="coin-title">VodaBucks</text>
+      <text class="coin-no">R {{coins}}</text>
+      <text onTap="storage" class="coin-title">in Vouchers!</text>
     </view>
   </view>
 </view>

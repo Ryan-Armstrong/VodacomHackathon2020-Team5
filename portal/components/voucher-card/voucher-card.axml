@@ -1,0 +1,7 @@
+<view>
+  <slot-text-card title="{{voucherValue}}" text="{{buyNowValue}}" notification="{{advanceAvailable}}" notificationText = "Advance Available"  selected="{{selected}}" onTap="onTap" ID="{{ID}}">
+    <view class="voucher-amount-view" slot="icon-slot" >
+      <text>R {{voucher.amount}}</text>
+    </view>
+  </slot-text-card> 
+</view> 

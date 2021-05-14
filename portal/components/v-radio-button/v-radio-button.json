@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "vbutton": "../buttons/vbutton/vbutton",
+    "generic-button": "../buttons/generic-button/generic-button"
+  }
+}

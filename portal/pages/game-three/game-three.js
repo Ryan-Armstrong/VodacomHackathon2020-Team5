@@ -101,11 +101,11 @@ Page({
       // this.score++;
       const score = this.data.score + 10;
       this.setData({ score });
-      my.vibrate({
-        success: () => {
-          // my.alert({ title: "Vibration on" });
-        }
-      });
+      // my.vibrate({
+      //   success: () => {
+      //     // my.alert({ title: "Vibration on" });
+      //   }
+      // });
       //Create new food
       this.create_food();
     } else {

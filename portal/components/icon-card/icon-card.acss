@@ -1,0 +1,42 @@
+.icon-container {
+  background-color: var(--primary-white);
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+.icon-container>view{
+  margin-top:10rpx;
+}
+
+.icon-card-view {
+  width: 335rpx;
+  height: 210rpx;
+  background-color: var(--base7);
+  display: inline-flex;
+  border-radius: 20rpx;
+  margin: 8rpx;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-container {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32rpx;
+  line-height: 130%;
+  text-align: center;
+  font-feature-settings: 'salt' on;
+  color: var(--black10);
+}

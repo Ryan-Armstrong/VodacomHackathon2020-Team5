@@ -32,6 +32,7 @@ page {
   height: 200rpx;
   bottom: 0px;
   display: block;
+  background-color: #08081B;
 }
 
 .score {
@@ -177,6 +178,6 @@ page {
 .am-modal-footer {
   color: #3d3d3d;
   font-size: 20px;
-  background-color: #b00017;
+  background-color: #08081B;
   height: 100px;
 }

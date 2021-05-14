@@ -1,0 +1,8 @@
+<generic-button disabled="{{disabled}}" 
+disabledClass ="{{type}}-disabled" 
+className="{{type}}" size="{{size}}"
+disabledTextClass= "{{type}}-disabled-text"
+onSubmit="onSubmit"
+hoverClass="{{type}}-hover">
+
+<slot/></generic-button>

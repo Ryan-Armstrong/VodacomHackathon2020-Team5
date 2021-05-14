@@ -1,0 +1,3 @@
+<view onTouchStart="startSwipe" onTouchEnd="endSwipe" onTouchMove="moveSwipe" >
+  <slot/>
+</view>

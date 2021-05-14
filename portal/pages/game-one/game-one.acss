@@ -5,7 +5,7 @@
 page {
   /* background-color: #3d3d3d; */
   border-top: #f1f1f1 solid 5px;
-  background-color: #3d3d3d;
+  background-color: #222739;
   /* background-color: #2c3e50; */
   /* padding-top: 100px; */
   /* background-image: url("../../assets/images/wheel.png"); */
@@ -50,13 +50,13 @@ page {
   width: 100%;
   height: 120px;
   position: absolute;
-  /* background: #b00017; */
-  background: rgb(176, 0, 23);
+  background: #08081B;
+  /* background: rgb(176, 0, 23);
   background: linear-gradient(
     90deg,
     rgba(176, 0, 23, 1) 0%,
     rgba(221, 36, 55, 1) 100%
-  );
+  ); */
   bottom: 0px;
 }
 
@@ -227,17 +227,48 @@ image {
 
 .am-modal {
   border-radius: 10px;
-  border: 5px solid #3d3d3d;
+  /* border: 5px solid white; */
+  background-color: #222739;
+  font-family: Roboto;
+  color: white;
+}
+
+.am-modal-header {
+  font-family: Roboto;
+  color: white;
 }
 
 .am-modal-footer::before {
-  background-color: #3d3d3d;
-  height: 10px;
+  /* background-color: #3d3d3d; */
+  /* height: 10px; */
 }
 
 .am-modal-footer {
   color: #3d3d3d;
   font-size: 20px;
-  background-color: #b00017;
   height: 100px;
+}
+
+
+.card-container{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.voucher-amount-view-x {
+  background: linear-gradient(132.99deg,  #E60000 4.59%,  #5E2750 109.7%);
+  height: 232rpx;
+  width:232rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
+
+.brand-logo {
+  /* style="display: block; width: 100px; height: 100px; margin: 5px; margin-left: 80px;" */
+    height: 232rpx;
+  width:232rpx;
+    border-radius: 50%;
 }

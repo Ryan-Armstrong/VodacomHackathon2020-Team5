@@ -1,0 +1,19 @@
+.voucher-amount-view {
+  background: linear-gradient(132.99deg, var(--primary-red) 4.59%, var(--secondary-aubergine) 109.7%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voucher-amount-view text {
+  position: absolute;
+  height: 48rpx;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42rpx;
+  line-height: 47.88rpx;
+  font-feature-settings: 'salt' on;
+  color: var(--black10);
+}

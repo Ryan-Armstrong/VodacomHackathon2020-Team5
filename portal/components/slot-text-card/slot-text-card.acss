@@ -1,0 +1,83 @@
+.icon-card {
+  color: var(--black10);
+  background-color: var(--base8);
+  border-radius: 16px;
+  height: 296rpx;
+  width: 686rpx;
+  position: relative;
+  border: solid 2rpx transparent;
+}
+
+.selected {
+  border: solid 2rpx var(--primary-white);
+}
+
+.card-title {
+  line-height: 48rpx;
+  position: absolute;
+  height: 48rpx;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32rpx;
+  font-feature-settings: 'salt' on;
+  color: var(--black10);
+  left: 287rpx;
+  top: 104rpx
+}
+
+.card-text {
+  position: absolute;
+  height: 32rpx;
+  left: 287rpx;
+  top: 160rpx;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24rpx;
+  line-height: 31.68rpx;
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'salt' on;
+  color: var(--base3);
+}
+
+.notification-text {
+  position: absolute;
+  border: 1.5rpx solid var(--info);
+  box-sizing: border-box;
+  border-radius: 21rpx;
+  left: 287rpx;
+  top: 185rpx;
+  padding: 6rpx 16rpx
+}
+
+.notification-text text {
+  height: 26rpx;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20rpx;
+  line-height: 23rpx;
+  font-feature-settings: 'salt' on;
+  color: var(--primary-white);
+}
+
+.notification .card-text {
+  top: 129rpx;
+}
+
+.notification .card-title {
+  top: 73rpx;
+}
+
+.icon-slot {
+  position: absolute;
+  width: 231rpx;
+  height: 232rpx;
+  left: 32rpx;
+  top: 32rpx;
+  background-color: var(--base3);
+  border-radius: 20rpx;
+  overflow: hidden;
+}

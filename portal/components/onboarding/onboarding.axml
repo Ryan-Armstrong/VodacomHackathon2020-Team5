@@ -1,0 +1,46 @@
+<swipe-action onSwipeLeft="onSwipeLeft" onSwipeRight="onSwipeRight">
+  <view class="onboarding-container">
+    <view class="pages-slider">
+      <view class="page-container" a:for="{{onboardingPages}}" a:index="index" style="left:{{sliderPosition + index * 100}}vw; ">
+        <view class="illustration-container">
+          <view class="left-image {{(index > 0 ? '':'hidden')}}">
+            <view class="image-container">
+              <image mode="widthFix" src="{{onboardingPages[index-1].imageSrc}}"/>
+            </view>
+          </view>
+          <view class="center-image">
+            <view class="image-container shadow-two" style="{{(index !== activeCard) ? 'height:352rpx;width:352rpx;':''}}">
+              <image mode="widthFix" src="{{onboardingPages[index].imageSrc}}" />
+            </view>
+            <view class="image-container shadow-one" style="{{(index !== activeCard) ? 'height:352rpx;width:352rpx':''}}">
+              <image mode="widthFix" src="{{onboardingPages[index].imageSrc}}"/>
+            </view>
+            <view class="image-container" style="{{(index !== activeCard) ? 'height:352rpx;width:352rpx;':''}}">
+              <image mode="widthFix" src="{{onboardingPages[index].imageSrc}}"/>
+            </view>
+          </view>
+          <view class="right-image {{(index < onboardingPages.length-1 ? '':'hidden')}}">
+            <view class="image-container">
+              <image mode="widthFix" src="{{onboardingPages[index+1].imageSrc}}"/>
+            </view>
+          </view>
+        </view>
+        <view class="header-text">
+          <text>{{onboardingPages[index].heading}}</text>
+        </view>
+        <view class="description-text">
+          <text>{{onboardingPages[index].description}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="nav-container">
+      <view class="nav-index">
+        <view a:for="{{onboardingPages}}" a:index="index" class="nav-circle {{(index == activeCard? 'selected' : '')}}">
+        </view>
+      </view>
+    </view>
+    <view class="button-container">
+      <vbutton type='primary' onSubmit="onSubmit">{{buttonText}}</vbutton>
+    </view>
+  </view>
+</swipe-action>

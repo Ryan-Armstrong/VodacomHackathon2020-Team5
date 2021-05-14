@@ -1,0 +1,6 @@
+<view class="banner {{style}}" style="height:{{height}}rpx" onTap="onTap">
+  <view class="image-view">
+    <image mode="widthFix" src="{{imageURL}}"/>
+  </view>
+  <image mode="aspectFill" src="{{backroundURL}}"/>
+</view>

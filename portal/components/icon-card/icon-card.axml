@@ -1,0 +1,8 @@
+<view class="icon-card-view" onTap="onTap">
+  <view class="icon-container">
+    <v-icon type="{{icon}}" width="{{50}}" height="{{50}}" color="var(--primary-red)"></v-icon>
+  </view>
+  <view class="text-container">
+    <text>{{text}}</text>
+  </view>
+</view>

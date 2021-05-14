@@ -1,0 +1,4 @@
+<view class='button-group'>
+  <vbutton type="secondary" onSubmit= "onSecondary" disabled="{{secondary_disabled}}" size="small"> {{secondary_text}}</vbutton>
+  <vbutton type="primary" disabled="{{primary_disabled}}" onSubmit="onPrimary" size= "medium"> {{primary_text}}</vbutton>
+</view>

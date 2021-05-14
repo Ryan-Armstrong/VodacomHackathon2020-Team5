@@ -9,19 +9,19 @@ class CoinsService {
       id: "spin",
       name: "Voda Spin-to-Win",
       image: "../../assets/images/spin-image.png",
-      unlocked: false
+      unlocked: true
     },
     {
       id: "bricks",
       name: "Voda Bricks",
       image: "../../assets/images/bricks-image.png",
-      unlocked: false
+      unlocked: true
     },
     {
       id: "snake",
       name: "Voda Snake",
       image: "../../assets/images/snake-image.png",
-      unlocked: false
+      unlocked: true
     }
   ];
 

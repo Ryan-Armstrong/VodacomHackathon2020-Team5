@@ -7,7 +7,7 @@
   <view class="inner" style="background-image: url({{state.bgImage}}); background-repeat: no-repeat; background-size: auto;">
     <canvas id="canvas" class="canvas" onTouchStart="touch" onTouchEnd="touch" />
   </view>
-  <view class="score-bg" style="background-color:{{state.colors.primary}} ">
+  <view class="score-bg">
   </view>
   <text a:if="{{showScore}}" class="score animated tada" style="color: {{state.colors.background}}">{{score}}</text>
   <!--<button class="left-btn" style="background-color:{{state.colors.primary}}; color:{{state.colors.background}}" onTap="left"><image class="ctrl-icon-left" src="../../assets/images/chevron-left.png" /></button><button class="right-btn" style="background-color:{{state.colors.primary}}; color:{{state.colors.background}}" onTap="right"><image class="ctrl-icon-right" src="../../assets/images/chevron-right.png" /></button> -->
@@ -21,12 +21,12 @@
 <!--<view class="popup" a:if="{{lose}}"><text class="popup-header" style="color:{{state.colors.primary}}">Oh Nose! Looks like you lost</text><text class="popup-text">You have still earned {{score}} VodaBucks!</text><button class="navBack" onTap="navBack">OK</button></view><view class="popup" a:if="{{win}}"><text class="popup-header" style="color:{{state.colors.primary}}">You Won! Congratulations!</text><text class="popup-text">You have earned {{score}} VodaBucks!</text><button class="navBack" onTap="navBack">OK</button></view> -->
 <modal-view show="{{lose}}" showClose="{{false}}" onModalClick="onModalClick" onModalClose="onModalClose" className= "{{landedColour}} animated tada">
   <view slot="header">
-    <text style="display: block; margin: 5px;">Oh Nose! Looks like you lost</text>
+    <text style="display: block; margin: 5px;">CONGRATULATIONS!</text>
     <image style="display: block; width: 100px; height: 100px; margin: 5px; margin-left: 80px;" class="animated fadeInDown" src="{{gameProviderLogo}}"></image>
-    <text style="display: block;">You have still earned
+    <text style="display: block;">You have WON
     </text>
     <text style="display: block;">
-      <image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> {{score}} VodaBucks!
+      <image style="width: 20px; height: 20px; margin: 0px 10px;" class="animated flip infinite" src="../../assets/images/vodabucks.png"></image> R{{score}} worth in Vouchers!
     </text>
   </view>
   <view slot="footer" onTap="navBack">
